@@ -57,7 +57,7 @@ var params = {
 
 #### Result
 
-````json
+````
 {
 	id: '1067610',
 	type: 'master',
