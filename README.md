@@ -57,7 +57,7 @@ var params = {
 
 #### Result
 
-````
+````json
 {
 	id: '1067610',
 	type: 'master',
@@ -71,19 +71,19 @@ var params = {
    	[ 
    		{	
    			title: 'Black Sabbath - Black Sabbath (8-Trk, Album)',
-       		condition_sleeve: 'Very Good (VG)',
-	       	condition_media: 'Very Good (VG)',
-	       	seller: 'easeup',
-	       	ships_from: 'United States',
-	       	price: '$45.00' 
+			condition_sleeve: 'Very Good (VG)',
+			condition_media: 'Very Good (VG)',
+			seller: 'easeup',
+			ships_from: 'United States',
+			price: '$45.00' 
 	   },
 	   { 
 	   		title: 'Black Sabbath - Black Sabbath (2xLP, Album, Dlx, RE, RM, 180)',
-		    condition_sleeve: 'Near Mint (NM or M-)',
-		    condition_media: 'Near Mint (NM or M-)',
-		    seller: 'fishtown19125',
-		    ships_from: 'United States',
-		    price: '$35.00' 
+			condition_sleeve: 'Near Mint (NM or M-)',
+			condition_media: 'Near Mint (NM or M-)',
+			seller: 'fishtown19125',
+			ships_from: 'United States',
+			price: '$35.00' 
 		}
 	]
 }
@@ -91,8 +91,7 @@ var params = {
 
 
 ## Installation
-[![NPM](https://nodei.co/npm/discogs-marketplace-js.png)](https://nodei.co/npm/discogs-marketplace-js/)
 
-## TODO:
-* Add ability to return a promise when no callback is provided
-* Add rate-limiting features
+```sh
+npm install KirianCaumes/discogs-marketplace-js
+```
