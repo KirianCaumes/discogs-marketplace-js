@@ -2,29 +2,31 @@
 
 JavaScript library to pull information from the Discogs marketplace.  Returns an object.
 
+MY FORK provide more data to the objects returns (url of the image and url of the item to sell), and implements a promise as the return the search istead of a callback.
 
 ## Usage
 
 #### Init
 
 ````javascript
-var marketplace = require('discogs-marketplace-js');
+var discogsApi = require('discogs-marketplace-js');
 ````
 
 #### Search
 ````javascript
-var search_parameters = {
-	id: "Black Sabbath",
-	type: "string",
+var params = {
+	id: "244819",
+	type: "artist",
 	pagination : {
-		page: 1
+		page: 1,
+            	per_page: 100,
+            	sort: "Listed Newest"
 	}
 }
 
-marketplace.search(search_parameters, function(result){
-	if(!(result instanceof Error))
-		console.log(result);
-});
+discogsApi.search(params)
+	.then(data => console.log(data))
+        .catch(err => console.log(err))
 ````
 
 
@@ -32,9 +34,9 @@ marketplace.search(search_parameters, function(result){
 To specify search filters and pagination options, discogs-marketplace-js will accept an object as an input.
 
 ````javascript
-var search_parameters = {
+var params = {
 	id: "1067610", //id can also be a string, if used with type 'string'
-	type: "release", //one of: 'release', 'master', 'label', 'string'
+	type: "release", //one of: 'release', 'master', 'label', 'string', OR 'artist' (with artist ID)
 	filters: {
 		genre: "Rock",
 		style: null,
