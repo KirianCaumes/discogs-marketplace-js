@@ -6,56 +6,59 @@ MY FORK provide more data to the objects returns (url of the image and url of th
 
 ## Usage
 
-#### Init
+### Init
 
 ````javascript
 var discogsApi = require('discogs-marketplace-js');
 ````
 
-#### Search
+### Search
+
 ````javascript
 var params = {
-	id: "244819",
-	type: "artist",
-	pagination : {
-		page: 1,
-            	per_page: 100,
-            	sort: "Listed Newest"
-	}
+    id: "244819",
+    type: "artist",
+    country: 'fr', //'fr' or 'en'
+    pagination : {
+        page: 1,
+        per_page: 100,
+        sort: "Listed Newest"
+    }
 }
 
 discogsApi.search(params)
-	.then(data => console.log(data))
-        .catch(err => console.log(err))
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
 ````
 
+### Filters/Pagination
 
-#### Filters/Pagination
 To specify search filters and pagination options, discogs-marketplace-js will accept an object as an input.
 
 ````javascript
 var params = {
-	id: "1067610", //id can also be a string, if used with type 'string'
-	type: "release", //one of: 'release', 'master', 'label', 'string', OR 'artist' (with artist ID)
-	filters: {
-		genre: "Rock",
-		style: null,
-		format: "Vinyl",
-		country: "US",
-		decade: null,
-		condition: ["Very Good Plus", "Mint"],
-		year: 2015,
-		currency: "USD",
-	},
-	pagination: {
-		page: 1,
-		per_page: 25,
-		sort: "Price Lowest Highest"
-	}
+    id: "1067610", //id can also be a string, if used with type 'string'
+    type: "release", //one of: 'release', 'master', 'label', 'string', OR 'artist' (with artist ID)
+    country: 'fr', //'fr' or 'en'
+    filters: {
+        genre: "Rock",
+        style: null,
+        format: "Vinyl",
+        country: "US",
+        decade: null,
+        condition: ["Very Good Plus", "Mint"],
+        year: 2015,
+        currency: "USD",
+    },
+    pagination: {
+        page: 1,
+        per_page: 25,
+        sort: "Price Lowest Highest"
+    }
 };
 ````
 
-#### Result
+### Result
 
 ````
 {
@@ -88,7 +91,6 @@ var params = {
 	]
 }
 ````
-
 
 ## Installation
 
