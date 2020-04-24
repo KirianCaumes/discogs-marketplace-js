@@ -1,5 +1,9 @@
 # discogs-marketplace-js
 
+⚠️ I no longer maintain this forked library. If you are looking for a good library to retrieve data from the Discogs marketplace, check it out here: [Discogs-Marketplace-API-NodeJS](https://github.com/KirianCaumes/Discogs-Marketplace-API-NodeJS) ⚠️
+
+---
+
 JavaScript library to pull information from the Discogs marketplace.  Returns an object.
 
 MY FORK provide more data to the objects returns, and implements a promise as the return the search instead of a callback.
